@@ -1,11 +1,11 @@
 package com.luciano.felipe.hrworker.resources;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,14 +19,24 @@ import com.luciano.felipe.hrworker.repositories.WorkerRepository;
 @RestController
 @RequestMapping(value = "/workers")
 public class WorkerResources {
-	
+
 	private static Logger logger = LoggerFactory.getLogger(WorkerResources.class);
 
 	@Autowired
 	private WorkerRepository workerRepository;
-	
+
 	@Autowired
 	private Environment environment;
+
+    @Value("${test.config}")
+    private String testConfig;
+    
+	@GetMapping(value = "/configs")
+	public ResponseEntity<Void> getConfig() {
+		logger.info(testConfig);
+		return ResponseEntity.noContent().build();
+
+	}
 
 	@GetMapping
 	public ResponseEntity<List<Worker>> findAll() {
