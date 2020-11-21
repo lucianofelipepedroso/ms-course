@@ -29,6 +29,7 @@ fetch("http://localhost:8765/hr-worker/workers", {
     "sec-fetch-mode": "cors",
     "sec-fetch-site": "cross-site"
   },
+  
   "referrer": "http://localhost:3000",
   "referrerPolicy": "no-referrer-when-downgrade",
   "body": null,
