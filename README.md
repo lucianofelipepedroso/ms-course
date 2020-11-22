@@ -37,3 +37,4 @@ fetch("http://localhost:8765/hr-worker/workers", {
   "credentials": "omit"
 });
 
+
