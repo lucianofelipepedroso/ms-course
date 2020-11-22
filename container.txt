@@ -10,6 +10,7 @@ docker run -p 5432:5432 --name hr-user-pg12 --network hr-net -e POSTGRES_PASSWOR
 
 hr-config-server
 
+
 FROM openjdk:11
 VOLUME /tmp
 EXPOSE 8888
