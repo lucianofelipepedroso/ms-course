@@ -33,6 +33,7 @@ mvnw clean package
 
 docker build -t hr-eureka-server:v1 .
 
+
 docker run -p 8761:8761 --name hr-eureka-server --network hr-net hr-eureka-server:v1
 hr-worker
 FROM openjdk:11
