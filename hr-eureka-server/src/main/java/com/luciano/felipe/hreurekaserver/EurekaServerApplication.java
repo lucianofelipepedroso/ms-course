@@ -8,8 +8,6 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-
-
 @EnableEurekaServer
 @SpringBootApplication
 public class EurekaServerApplication implements CommandLineRunner {
